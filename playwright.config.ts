@@ -28,7 +28,7 @@ export default defineConfig({
     baseURL: 'https://demowebshop.tricentis.com/',
 
     /* Headless mode for running tests */
-    headless: false,
+    headless: process.env.CI ? true : false,
 
     /* Collect trace when retrying the failed test */
     trace: 'on-first-retry',

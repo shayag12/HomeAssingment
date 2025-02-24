@@ -1,13 +1,13 @@
-import { test } from '../Fixtures/NewTestFixtures'; // Import the custom test
+import { test } from '../Fixtures/NewPageFixtures'; // Import the custom test
 import * as allure from "allure-js-commons"; // Import Allure
+import { logger } from '../loggerUtils';
 
 test('New user registry and adding a product', async ({ page, homePage, registryPage,digitalDownloadsPage }) => {
-
+  logger.info('The test case has started');
   allure.description("The test case is to register a new user and add a product to the cart");
   allure.owner("Shay Agiv");
   allure.tags("entry", "development");
   allure.severity(allure.Severity.CRITICAL);
-
   // Step 1: Navigate to the page
   await allure.step('Navigate to the homepage', async () => {
     await page.goto('/');
@@ -49,7 +49,7 @@ test('New user registry and adding a product', async ({ page, homePage, registry
   await allure.step('Pause for debugging', async () => {
     await page.pause();
   });
-
+  logger.info('The test case has ended');
 });
 
  // allure report generation

@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@faker-js/faker": "^9.5.0",
-    "allure-js-commons": "^3.2.0"
+    "allure-js-commons": "^3.2.0",
+    "winston": "^3.17.0"
   }
 }

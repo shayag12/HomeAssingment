@@ -1,4 +1,5 @@
 import { expect, type Locator, type Page } from '@playwright/test';
+import { logger } from '../loggerUtils';
 
 export class HomePage {
     readonly page: Page;
@@ -14,11 +15,11 @@ export class HomePage {
         await expect(this.registerButton).toBeVisible();
         await expect (this.registerButton).toHaveText('Register');
         await this.registerButton.click();
-        console.log('Clicked on Register button successfully');
+        logger.info('Clicked on Register button successfully');
     }
     async clickShoppingCartButton() {
         await expect(this.shoppingCartButton).toBeVisible();
         await this.shoppingCartButton.click();
-        console.log('Clicked on Shopping Cart button successfully');
+        logger.info('Clicked on Shopping Cart button successfully');
     }
 }
