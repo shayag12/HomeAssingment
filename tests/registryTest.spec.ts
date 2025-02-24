@@ -1,4 +1,4 @@
-import { test } from './pages/Fixtures/NewTestFixtures';
+import { test } from '../Fixtures/NewTestFixtures'; // Import the custom test
 import * as allure from "allure-js-commons"; // Import Allure
 
 test('New user registry and adding a product', async ({ page, homePage, registryPage,digitalDownloadsPage }) => {
@@ -45,7 +45,7 @@ test('New user registry and adding a product', async ({ page, homePage, registry
    await homePage.clickShoppingCartButton();
   });
 
-  // Step 10: Pause for debugging *optional*
+  // Step 9: Pause for debugging *optional*
   await allure.step('Pause for debugging', async () => {
     await page.pause();
   });

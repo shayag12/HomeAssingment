@@ -1,7 +1,7 @@
 import { test as base } from '@playwright/test';
-import { HomePage } from '../HomePage';
-import { RegistryPage } from '../RegistryPage';
-import { DigitalDownloadsPage } from '../DigitalDownloadsPage';
+import { HomePage } from '../pages/HomePage';
+import { RegistryPage } from '../pages/RegistryPage';
+import { DigitalDownloadsPage } from '../pages/DigitalDownloadsPage';
 // Extend the base test to create custom fixtures
 export type newPageFixtures = {
   homePage: HomePage;
